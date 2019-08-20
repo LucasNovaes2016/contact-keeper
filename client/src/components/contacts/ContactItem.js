@@ -21,7 +21,7 @@ const ContactItem = ({ contact }) => {
           style={{ float: 'right' }}
           className={
             'badge ' +
-            (type === 'professional' ? 'badge-success' : 'badge-primary')
+            (type === 'Profissional' ? 'badge-success' : 'badge-primary')
           }
         >
           {type.charAt(0).toUpperCase() + type.slice(1)}
@@ -44,10 +44,10 @@ const ContactItem = ({ contact }) => {
           className='btn btn-dark btn-sm'
           onClick={() => setCurrent(contact)}
         >
-          Edit
+          Editar
         </button>
         <button className='btn btn-danger btn-sm' onClick={onDelete}>
-          Delete
+          Remover
         </button>
       </p>
     </div>

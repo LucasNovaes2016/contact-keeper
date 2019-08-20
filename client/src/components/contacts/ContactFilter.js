@@ -26,7 +26,7 @@ const ContactFilter = () => {
       <input
         ref={text}
         type='text'
-        placeholder='Filter Contacts...'
+        placeholder='Filtrar Contatos...'
         onChange={onChange}
       />
     </form>

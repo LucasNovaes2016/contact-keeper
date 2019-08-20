@@ -15,7 +15,7 @@ const Contacts = () => {
   }, []);
 
   if (contacts !== null && contacts.length === 0 && !loading) {
-    return <h4>Please add a contact</h4>;
+    return <h4>Por favor, adicione um contato</h4>;
   }
 
   return (
@@ -24,27 +24,27 @@ const Contacts = () => {
         <TransitionGroup>
           {filtered !== null
             ? filtered.map(contact => (
-                <CSSTransition
-                  key={contact._id}
-                  timeout={500}
-                  classNames='item'
-                >
-                  <ContactItem contact={contact} />
-                </CSSTransition>
-              ))
+              <CSSTransition
+                key={contact._id}
+                timeout={500}
+                classNames='item'
+              >
+                <ContactItem contact={contact} />
+              </CSSTransition>
+            ))
             : contacts.map(contact => (
-                <CSSTransition
-                  key={contact._id}
-                  timeout={500}
-                  classNames='item'
-                >
-                  <ContactItem contact={contact} />
-                </CSSTransition>
-              ))}
+              <CSSTransition
+                key={contact._id}
+                timeout={500}
+                classNames='item'
+              >
+                <ContactItem contact={contact} />
+              </CSSTransition>
+            ))}
         </TransitionGroup>
       ) : (
-        <Spinner />
-      )}
+          <Spinner />
+        )}
     </Fragment>
   );
 };

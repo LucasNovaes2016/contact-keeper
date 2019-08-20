@@ -14,7 +14,7 @@ const ContactForm = () => {
         name: '',
         email: '',
         phone: '',
-        type: 'personal'
+        type: 'Pessoal'
       });
     }
   }, [contactContext, current]);
@@ -23,7 +23,7 @@ const ContactForm = () => {
     name: '',
     email: '',
     phone: '',
-    type: 'personal'
+    type: 'Pessoal'
   });
 
   const { name, email, phone, type } = contact;
@@ -48,7 +48,7 @@ const ContactForm = () => {
   return (
     <form onSubmit={onSubmit}>
       <h2 className='text-primary'>
-        {current ? 'Edit Contact' : 'Add Contact'}
+        {current ? 'Editar Contato' : 'Adicionar Contato'}
       </h2>
       <input
         type='text'
@@ -66,39 +66,39 @@ const ContactForm = () => {
       />
       <input
         type='text'
-        placeholder='Phone'
+        placeholder='Fone'
         name='phone'
         value={phone}
         onChange={onChange}
       />
-      <h5>Contact Type</h5>
+      <h5>Tipo de Contato</h5>
       <input
         type='radio'
         name='type'
-        value='personal'
-        checked={type === 'personal'}
+        value='Pessoal'
+        checked={type === 'Pessoal'}
         onChange={onChange}
       />{' '}
-      Personal{' '}
+      Pessoal{' '}
       <input
         type='radio'
         name='type'
-        value='professional'
-        checked={type === 'professional'}
+        value='Profissional'
+        checked={type === 'Profissional'}
         onChange={onChange}
       />{' '}
-      Professional
+      Profissional
       <div>
         <input
           type='submit'
-          value={current ? 'Update Contact' : 'Add Contact'}
+          value={current ? 'Atualizar Contato' : 'Adicionar Contato'}
           className='btn btn-primary btn-block'
         />
       </div>
       {current && (
         <div>
           <button className='btn btn-light btn-block' onClick={clearAll}>
-            Clear
+            Limpar
           </button>
         </div>
       )}

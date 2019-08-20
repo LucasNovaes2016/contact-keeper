@@ -33,7 +33,7 @@ const Login = props => {
   const onSubmit = e => {
     e.preventDefault();
     if (email === '' || password === '') {
-      setAlert('Please fill in all fields', 'danger');
+      setAlert('Por favor, preencha todos os campos', 'danger');
     } else {
       login({
         email,
@@ -45,11 +45,11 @@ const Login = props => {
   return (
     <div className='form-container'>
       <h1>
-        Account <span className='text-primary'>Login</span>
+        Faça <span className='text-primary'>Login</span>
       </h1>
       <form onSubmit={onSubmit}>
         <div className='form-group'>
-          <label htmlFor='email'>Email Address</label>
+          <label htmlFor='email'>Endereço de Email</label>
           <input
             type='email'
             name='email'
@@ -59,7 +59,7 @@ const Login = props => {
           />
         </div>
         <div className='form-group'>
-          <label htmlFor='password'>Password</label>
+          <label htmlFor='password'>Senha</label>
           <input
             type='password'
             name='password'

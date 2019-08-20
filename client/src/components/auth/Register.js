@@ -35,9 +35,9 @@ const Register = props => {
   const onSubmit = e => {
     e.preventDefault();
     if (name === '' || email === '' || password === '') {
-      setAlert('Please enter all fields', 'danger');
+      setAlert('Por favor, preencha todos os campos', 'danger');
     } else if (password !== password2) {
-      setAlert('Passwords do not match', 'danger');
+      setAlert('Senhas não coincidem', 'danger');
     } else {
       register({
         name,
@@ -50,11 +50,11 @@ const Register = props => {
   return (
     <div className='form-container'>
       <h1>
-        Account <span className='text-primary'>Register</span>
+        Crie sua <span className='text-primary'>Conta</span>
       </h1>
       <form onSubmit={onSubmit}>
         <div className='form-group'>
-          <label htmlFor='name'>Name</label>
+          <label htmlFor='name'>Nome</label>
           <input
             type='text'
             name='name'
@@ -64,7 +64,7 @@ const Register = props => {
           />
         </div>
         <div className='form-group'>
-          <label htmlFor='email'>Email Address</label>
+          <label htmlFor='email'>Endereço de Email</label>
           <input
             type='email'
             name='email'
@@ -74,7 +74,7 @@ const Register = props => {
           />
         </div>
         <div className='form-group'>
-          <label htmlFor='password'>Password</label>
+          <label htmlFor='password'>Senha</label>
           <input
             type='password'
             name='password'
@@ -85,7 +85,7 @@ const Register = props => {
           />
         </div>
         <div className='form-group'>
-          <label htmlFor='password2'>Confirm Password</label>
+          <label htmlFor='password2'>Confirmar Senha</label>
           <input
             type='password'
             name='password2'
@@ -97,7 +97,7 @@ const Register = props => {
         </div>
         <input
           type='submit'
-          value='Register'
+          value='Criar'
           className='btn btn-primary btn-block'
         />
       </form>
